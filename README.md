@@ -17,7 +17,7 @@
 Install the required dependencies:
 
 ```
-npm i --save
+npm install --save
 ```
 
 ## Development
