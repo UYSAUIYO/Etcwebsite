@@ -1,0 +1,104 @@
+[
+    {
+        "text": "主页",
+        "data": null,
+        "icon": "gesture",
+        "link": "https://www.etherealcraft.cn/",
+        "color": "blue"
+    },
+    {
+        "text": "服务器地图",
+        "data": null,
+        "icon": "earth",
+        "link": "http://s9.52mc.pro:7013/",
+        "color": "green"
+    },
+    {
+        "text": "意见反馈",
+        "data": null,
+        "icon": "hammer-wrench",
+        "link": "https://wj.etherealcraft.cn/s/JwsF54",
+        "color": "deep-orange"
+    },
+    {
+        "text": "审核系统登录",
+        "data": null,
+        "icon": "file-question",
+        "link": "https://wj.etherealcraft.cn/user/login",
+        "color": "#6fb4eb"
+    },
+    {
+        "text": "服务器功能",
+        "icon": "BookOpen",
+        "data": [
+            {
+                "href": "https://img.etherealcraft.cn/",
+                "text": "照片墙",
+                "icon": "panorama",
+                "color": "#175ceb"
+            },
+            {
+                "icon": "chart-arc",
+                "href": "https://docs.qq.com/doc/DZGFCZlBFY0htbHdh",
+                "text": "玩家须知"
+            },
+            {
+                "icon": "folder-account",
+                "href": "https://docs.qq.com/doc/DZFJySFlCSFVUQU9m",
+                "text": "ETC项目"
+            }
+        ],
+        "icon": "package-variant-closed",
+        "link": null,
+        "color": "deep-purple"
+    },
+    {
+        "text": "教 程",
+        "data": [
+            {
+                "href": "https://minecraft.fandom.com/zh/wiki/Minecraft_Wiki?variant=zh",
+                "text": "我的世界WiKi",
+                "color": "#4c3f5b"
+            },
+            {
+                "href": "https://b23.tv/6Atxnpm",
+                "text": "喷射合成",
+                "color": "#175ceb"
+            },
+            {
+                "href": "https://www.bilibili.com/video/BV1NV411o7t2",
+                "text": "Tweaker模组"
+            },
+            {
+                "href": "https://www.bilibili.com/video/BV1yk4y1y7Cj",
+                "text": "投影模组使用"
+            },
+            {
+                "href": "https://www.bilibili.com/video/BV1XC4y1H7P9",
+                "text": "Itemscroller教程"
+            },
+            {
+                "href": "https://www.bilibili.com/video/BV1zi4y1u7M6",
+                "text": "Minihud教程"
+            },
+            {
+                "href": "https://www.bilibili.com/video/BV1Qf4y157qk",
+                "text": "OMMC教程"
+            },
+            {
+                "href": "https://www.bilibili.com/video/BV1Ar4y1g71r",
+                "text": "Gadget教程"
+            }
+        ],
+        "icon": "package-variant-closed",
+        "link": null,
+        "color": "deep-purple"
+    },
+    {
+        "text": "友情链接",
+        "data": null,
+        "icon": "link-variant",
+        "link": "未开发完成",
+        "color": "grey"
+    }
+]
