@@ -1,4 +1,4 @@
-# FSky7.Home
+# ETC
 
 **EtherealCraft's Website - HomePage**
 
