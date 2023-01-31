@@ -1,12 +1,11 @@
 /**
- * FlyingSky's Home
- * Dark Mode
- * 
- * @author FlyingSky-CN
- * @link https://github.com/FlyingSky-CN/MDr/blob/master/darkmode.js
- * @link https://blog.skk.moe/post/hello-darkmode-my-old-friend
- * @link https://blog.fsky7.com/archives/46
- */
+ * rit`website
+ * dark mode
+ *
+ * @author Mc_yuwen -cn
+ * @link https://www.etherealcraft.cn
+ * @link https://github.com/UYSAUIYO/Etcwebsite/blob/main/src/assets/darkmode.js
+ * **/
 
 export default function (vue) {
 
