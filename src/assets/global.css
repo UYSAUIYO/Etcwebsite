@@ -1,0 +1,83 @@
+body::-webkit-scrollbar,
+[class*="v-"]::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+body{
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mdui-theme-layout-dark img {
+    filter: brightness(75%)
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [class*="mdui-"] {
+        animation: none !important
+    }
+}
+
+.f-dark {
+    background: #121212!important;
+    color: #fff!important;
+}
+
+.f-dark .v-navigation-drawer__content {
+    background: #121212!important;
+}
+
+.f-text {
+    color: #000!important;
+}
+
+.f-dark .f-text {
+    color: #fff!important;
+}
+
+.f-container {
+    max-width: 896px;
+}
+#xh {
+    position: relative;
+}
+
+.xue {
+    position: absolute;
+    display: inline-block;
+    /* opacity: .7; */
+    outline: none;
+    border: none;
+    animation: xuehua 5s infinite linear;
+}
+
+.xue:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+    opacity: 1;
+}
+
+@keyframes xuehua{
+    from{
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to{
+        opacity: 0;
+        transform: translate(0, 700px) rotateZ(720deg) rotateY(720deg) scale(1.5);
+    }
+}
+.snow{
+    display: block;
+    opacity: 1;
+    z-index: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 3s ease 0s;
+    pointer-events: none;
+}
+/*默哀效果*/
+/*html{*/
+/*    filter: grayscale(1);*/
+/*}*/

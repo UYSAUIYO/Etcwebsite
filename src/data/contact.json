@@ -1,0 +1,16 @@
+{
+  "title": "联系我们",
+  "subtitle": "Contact",
+  "data": [
+    {
+      "href": "https://wj.qq.com/s2/10503260/3f34/",
+      "key": "问卷审核",
+      "value": "审核要求"
+    },
+    {
+      "href": "tencent://message/?uin=2665405745&Site=&Menu=yes",
+      "key": "腐竹",
+      "value": "QQ联系"
+    }
+  ]
+}

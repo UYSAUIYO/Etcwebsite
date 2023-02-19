@@ -1,0 +1,42 @@
+[{
+        "icon": "account-circle-outline",
+        "text": "Java"
+    },
+    {
+        "icon": "chart-timeline-variant",
+        "text": "我的世界"
+    },
+    {
+        "icon": "all-inclusive",
+        "text": "Minecraft"
+    },
+    {
+        "icon": "thought-bubble-outline",
+        "text": "Coding"
+    },
+    {
+        "icon": "atom",
+        "text": "emotion"
+    },
+    {
+        "icon": "code-tags",
+        "text": "Html5"
+    },
+    {
+        "icon": "code-tags",
+        "text": "Material Design"
+    },
+    {
+        "icon": "code-braces",
+        "text": "Vue",
+        "href": "https://vuejs.org/"
+    },
+    {
+        "icon": "code-braces",
+        "text": "JavaScript"
+    },
+    {
+        "icon": "source-branch",
+        "text": "TypeScript"
+    }
+]
