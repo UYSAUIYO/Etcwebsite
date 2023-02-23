@@ -1,109 +1,111 @@
 <template>
-  <div style="background: none" :dark="dark">
-  <v-stepper v-model="e1">
-    <v-stepper-header :dark="dark" style="background: none">
-      <v-stepper-step
-          :complete="e1 > 1"
-          step="1"
-          style="background: none"
-      >
-        提交一审问卷
-      </v-stepper-step>
+  <div style="background: none" class="bots" :dark="dark">
+    <v-card>
+      <v-toolbar flat color="#fb7299" :dark="dark">
+        <v-toolbar-title>审核单元</v-toolbar-title>
+        <v-card-subtitle>Beta</v-card-subtitle>
+      </v-toolbar>
+      <v-tabs vertical :dark="dark">
+        <v-tabs-slider color="#fb7299"></v-tabs-slider>
+        <v-tab left>
+          <v-icon>mdi-account-alert</v-icon>
+          基础要求
+        </v-tab>
+        <v-tab>
+          <v-icon left> mdi-chip </v-icon>
+          红石
+        </v-tab>
+        <v-tab>
+          <v-icon left> mdi-bank </v-icon>
+          后勤
+        </v-tab>
+        <v-tab>
+          <v-icon left> mdi-apps </v-icon>
+          建筑
+        </v-tab>
 
-      <v-divider></v-divider>
+        <v-tab-item >
+          <v-card flat :dark="dark">
+            <v-card-title>审核规定</v-card-title>
+            <v-card-subtitle>审核流程介绍</v-card-subtitle>
+            <v-card-text>
+              <v-card-actions>要求：</v-card-actions>
+              <p>
+                1.请确保提供的联系方式是正确的，是可以可以联系的，是您本人的账号。
+              </p>
+              <p>
+                2.通过唯一渠道进行审核，审核玩家应需要填写一审问卷，先注册一个<a @click="regsiter">审核平台账号</a>参与审核问卷，一审问卷内容会根据实际情况进行修改，以确保问卷没有问题。
+              </p>
+              <p>
+                3.审核玩家请认真填写一审问卷,重复提交问卷会降低印象分，如果提交问卷在三天内没有得到答复，则是未通过。
+              </p>
+              <p>
+                4.单张问卷审核时间最多三天，每周最多投卷一次，请勿重复提交。
+              </p>
+              <p>
+                5.一审通过后，进入二审，二审通过后，有为期一周的<a>考察期</a>，主要是在线率和交流情况。
+              </p>
+              <p>6.有更多特长也许是个加分项，请好好写下您的个人情况简介，我们会更加在意。</p>
+              <p>7.入服后请阅读<a @click="note">入服须知。</a></p>
+              <v-btn class="login" color="#fb7299" @click="regsiter" :dark="dark">
+                <v-icon>mdi-login</v-icon>
+                注册
+              </v-btn>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card flat :dark="dark">
+            <v-card-title>红石</v-card-title>
+            <v-card-subtitle>审核流程介绍</v-card-subtitle>
+            <v-card-text>
+              <v-card-actions>要求：</v-card-actions>
+              <v-card-actions>
+                <p>
+                  对于Minecraft的游戏特性也有所了解，对于红石基础有足够的认知，协助或独自制造或者修改过
+                  红石机器，游戏时间比较充裕，对于机器的原理能有所解释，能够擅长沟通解决问题。
+                </p>
+              </v-card-actions>
+              <v-btn class="login" @click="mongily" color="#fb7299">
+                <v-icon>mdi-upload</v-icon>
+                填写问卷
+              </v-btn>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card flat :dark="dark">
+            <v-card-text>
+             <v-card-title>后勤要求</v-card-title>
+             <v-card-subtitle>审核流程介绍</v-card-subtitle>
+            <v-card-text>
+              <p>1.熟悉各种mod的使用，熟练使用喷射合成台，详细内容请查看网站的相关教程列表。</p>
+              <p>2.在线频率高，在线不强制要求，活跃度很高也算是加分项。</p>
+              <v-btn class="login" @click="mongily" color="#fb7299">
+                <v-icon>mdi-upload</v-icon>
+                填写问卷
+              </v-btn>
+            </v-card-text>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card flat :dark="dark">
+            <v-card-text>
+              <v-card-title>建筑</v-card-title>
+              <v-card-subtitle>审核要求介绍 Beta</v-card-subtitle>
+              <p>1.一审考理论性知识，有一个大概的知识方向没出错基本都能通过，（来卖授权和投影的可以走了）。</p>
+              <p>2.二审是一些简单的交流和实操部分，如果有作品，请直接在一审问卷中上传您的作品视频或者是图片。</p>
+              <v-btn class="login" @click="build" color="#fb7299">
+                <v-icon>mdi-upload</v-icon>
+                填写问卷
+              </v-btn>
+            </v-card-text>
 
-      <v-stepper-step
-          :complete="e1 > 2"
-          step="2"
-      >
-        添加审核人员
-      </v-stepper-step>
-
-      <v-divider></v-divider>
-
-      <v-stepper-step step="3">
-        参加二审
-      </v-stepper-step>
-    </v-stepper-header>
-
-    <v-stepper-items>
-      <v-stepper-content step="1">
-        <v-card
-            class="mb-12"
-            height="auto"
-            elevation="8"
-        >
-          <v-card-title>一审问卷</v-card-title>
-          <v-card-subtitle>自搭建问卷系统</v-card-subtitle>
-        <v-card-text><a class="retie" href="https://wj.etherealcraft.cn">一审问卷答题</a>是服务器审核的唯一途径,这是我们最快认识你的方式，服务器的审核总共分为三类后勤，红石和建筑。一审问卷在此基础上设计了一些简单的题目请大家认真作答。（请记得<a class="retie" href="https://wj.etherealcraft.cn/user/register">注册</a>，注册完成之后才能填写问卷。）
-        一定要详细阅读审核要求，熟悉相关教程（后勤），知晓服务器的要求。
-        </v-card-text>
-          <v-card-actions>
-            <v-btn @click="wj" color="#e3688b">审核入口</v-btn>
-          </v-card-actions>
-        </v-card>
-
-        <v-btn
-            color="#e3688b"
-            @click="e1 = 2"
-        >
-          Next
-        </v-btn>
-
-
-      </v-stepper-content>
-
-      <v-stepper-content step="2">
-        <v-card
-            class="mb-12"
-            height="auto"
-            elevation="8"
-
-        >
-          <v-card-title>审核机器人</v-card-title>
-          <v-card-subtitle>菜鸟写的</v-card-subtitle>
-          <el-image
-              style="width: 100px; height: 200px;text-align: center; vertical-align: center"
-              :src="url"
-              :preview-src-list="srcList">
-          </el-image>
-          点击图片可放大
-          <v-card-text>输入start开启程序，这是机器人，不要乱说话，后台有记录，请不要重复输入指令，我们会看的（的确）</v-card-text>
-        </v-card>
-
-        <v-btn
-            color="#e3688b"
-            @click="e1 = 3"
-
-        >
-          Next
-        </v-btn>
-
-      </v-stepper-content>
-
-      <v-stepper-content step="3">
-        <v-card
-            class="mb-12"
-            height="200px"
-            elevation="8"
-
-        >
-          <v-card-title>二审</v-card-title>
-          <v-card-subtitle>内部审核</v-card-subtitle>
-        <v-card-text>进入审核群开始进一步的审核内容，要求：后勤模组要会，红石理解机器运行机制，会简单的改造机器，建筑，主观判断不做评价。</v-card-text>
-        </v-card>
-
-        <v-btn
-            color="#e3688b"
-            @click="e1 = 1"
-        >
-          Next
-        </v-btn>
-
-
-      </v-stepper-content>
-    </v-stepper-items>
-  </v-stepper>
+          </v-card>
+        </v-tab-item>
+      </v-tabs>
+    </v-card>
   </div>
 </template>
 
@@ -111,23 +113,31 @@
 // import FhelpPages from "../views/helpPage";
 export default {
   name: "BotSetps",
-  components:{
-
-  },
-  data(){
-    return{
-      dialog:false,
+  components: {},
+  data() {
+    return {
+      tab: null,
+      items: ["红石", "后勤", "建筑"],
+      dialog: false,
       e1: 1,
-      url:'http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg',
-      srcList: [
-        'http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg'
-      ]
-    }
+      url: "http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg",
+      srcList: ["http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg"],
+    };
   },
-  methods:{
-    wj(){
+  methods: {
+    regsiter() {
+      window.open("https://wj.etherealcraft.cn/user/register");
+    },
+    mongily(){
       window.open("https://wj.etherealcraft.cn/s/iWmBj1")
+    },
+    build(){
+      window.open("https://wj.etherealcraft.cn/s/RprmzU")
+    },
+    note(){
+      window.open("https://docs.qq.com/doc/DZGFCZlBFY0htbHdh")
     }
+
   },
   props: {
     dark: {
@@ -135,11 +145,18 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style scoped>
-.retie{
-  text-decoration: none;
+/*.retie {*/
+/*  text-decoration: none;*/
+/*}*/
+/* .bots{
+  display: table-cell;
+  max-width: 550px;
+} */
+.login{
+  background-color: #fb7299;
 }
 </style>

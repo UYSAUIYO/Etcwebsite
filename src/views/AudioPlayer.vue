@@ -15,7 +15,7 @@ export default {
           name: '1up',
           artist: ' - F-777',
           url: 'https://api.etherealcraft.cn/music/1up%20-%20F-777.mp3',
-          cover: 'https://p1.music.126.net/5zs7IvmLv7KahY3BFzUmrg==/109951163635241613.jpg?param=300y300', // prettier-ignore
+          cover: 'https://p1.music.126.net/5zs7IvmLv7KahY3BFzUmrg==/109951163635241613.jpg?param=300y300',
         }
       ]
     }

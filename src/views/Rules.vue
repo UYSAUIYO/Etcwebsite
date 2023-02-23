@@ -7,9 +7,7 @@
       <fhelp-pages :dark="dark"></fhelp-pages>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="primary" text @click="dialog = false">
-          确定
-        </v-btn>
+        <v-btn color="primary" text @click="dialog = false"> 确定 </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -17,10 +15,8 @@
 
 <script>
 export default {
-  name: "Rules"
-}
+  name: "Rules",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
