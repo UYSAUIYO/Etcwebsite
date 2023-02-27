@@ -42,7 +42,7 @@
         <f-donate :dark="dark"></f-donate>
         <f-donates :dark="dark"></f-donates>
         <f-pick-show :dark="dark"></f-pick-show>
-        <!--                <f-link-page :dark="dark"></f-link-page>-->
+<!--        <f-link-page :dark="dark"></f-link-page>-->
         <f-footer :dark="dark"></f-footer>
         <aplayer :audio="audio" :lrcType="3" fixed />
       </v-container>
