@@ -53,7 +53,7 @@
         :bottom="100"
       >
         <div
-          :dark="dark"
+
           style="
              {
               height: 100%;
@@ -68,11 +68,17 @@
           ↑
         </div>
       </el-backtop>
+      <FRightClick></FRightClick>
     </v-main>
   </v-app>
 </template>
 
 <script>
+window.onload = function (){
+  document.oncontextmenu=function (e){
+    e.preventDefault();
+  }
+};
 import Darkmode from "./assets/darkmode";
 // import Snow from  "./assets/snow"
 
@@ -89,7 +95,8 @@ import FDonates from "./components/Donates";
 import FPickShow from "./components/PickShow";
 import FBotSteps from "./views/BotSetps";
 // import FLinkPage from '/src/views/linkPage';
-// import FMainNewYear from '../src/views/mainNewYear'
+import FRightClick from '@/components/RightClick.vue'
+
 
 export default {
   name: "App",
@@ -109,6 +116,7 @@ export default {
     // FPicslide,
     FPickShow,
     FBotSteps,
+    FRightClick,
   },
 
   data: () => ({
@@ -142,7 +150,9 @@ export default {
     // snow:false,
     drawer: null,
   }),
-  methods: {},
+  methods: {
+
+  },
   mounted() {
     Darkmode(this);
     // Snow(this);
