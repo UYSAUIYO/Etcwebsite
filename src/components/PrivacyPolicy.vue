@@ -2,13 +2,14 @@
   <div>
     <v-card-title class="headline lighten-2 pt-5">
       隐私政策 / Privacy Policy
+      以及包括的服务器的声明内容
     </v-card-title>
 
     <v-card-text class="pb-0 mb-n2">
       <div class="text-h6 mb-2">总则</div>
       <div class="text-body-2 mb-2">
         感谢您访问
-        <a href="https://fsky7.com" style="text-decoration: none"
+        <a href="https://www.etherealcraft.cn" style="text-decoration: none"
           >EtherealCraft`s Website</a
         >（以下简称「本站」）。尽管我们在您浏览的过程中可能会收集浏览器的信息以改善应用程序和服务质量，但是我们非常重视您的隐私保护和个人信息保护。为了更好的保护您的隐私，我们提供了本隐私政策声明，描述我们收集、处理、存储和使用您的个人信息的方式。
       </div>
