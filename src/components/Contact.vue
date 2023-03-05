@@ -9,7 +9,6 @@
     <div class="px-2 pb-2">
       <v-row no-gutters>
         <v-col cols="6"  class="px-2">
-
             <div class="text-center">
               <v-dialog
               v-model="dialogVisible"
@@ -28,9 +27,21 @@
                   <v-card-subtitle >章鱼蛋</v-card-subtitle>
                   </v-card>
                 </template>
-                <v-card>
-                  <v-card-title>{{botsetps.title}}</v-card-title>
-                  <v-card-text>{{botsetps.contact.one}}</v-card-text>
+                <v-card :dark="dark">
+                  <v-card-title
+                      style="background-color: #fb7299" class="text-h5 lighten-2">{{botsetps.title}}</v-card-title>
+                  <v-card-text>{{botsetps.contact.contact1}}</v-card-text>
+                  <v-spacer></v-spacer>
+                  <v-card-actions>
+                  <v-btn color="#fb7299" text @click="dialogVisible = false">
+                    <v-icon>mdi-close</v-icon>
+                    关闭
+                  </v-btn>
+                    <v-btn color="#fb7299" text @click="connect">
+                      <v-icon>mdi-lan-connect</v-icon>
+                      联系
+                    </v-btn>
+                  </v-card-actions>
                 </v-card>
               </v-dialog>
             </div>
@@ -63,12 +74,14 @@ export default {
           key: "问卷审核",
           value: "审核要求",
         },
-      ],
-      urlrq: "http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg",
-      srcList: ["http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg"],
+      ]
     };
   },
-  methods: {},
+  methods: {
+    connect(){
+      window.open("tencent://message/?uin=2665405745&Site=&Menu=yes")
+    }
+  },
   props: {
     dark: {
       type: Boolean,

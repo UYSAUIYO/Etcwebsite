@@ -28,11 +28,9 @@
     <v-main :dark="dark">
       <canvas id="canvas" class="snow"></canvas>
       <f-main-title></f-main-title>
-      <!--          <f-main-new-year></f-main-new-year>-->
       <v-container class="f-container">
         <f-main-about :dark="dark"></f-main-about>
         <f-main-chips :dark="dark"></f-main-chips>
-        <!--                <f-picslide :dark="dark"></f-picslide>-->
         <f-contact
           style="display: block; opacity: 1; z-index: 1"
           :dark="dark"
@@ -42,7 +40,6 @@
         <f-donate :dark="dark"></f-donate>
         <f-donates :dark="dark"></f-donates>
         <f-pick-show :dark="dark"></f-pick-show>
-<!--        <f-link-page :dark="dark"></f-link-page>-->
         <f-footer :dark="dark"></f-footer>
         <aplayer :audio="audio" :lrcType="3" fixed />
       </v-container>
@@ -68,17 +65,11 @@
           ↑
         </div>
       </el-backtop>
-      <FRightClick></FRightClick>
     </v-main>
   </v-app>
 </template>
 
 <script>
-window.onload = function (){
-  document.oncontextmenu=function (e){
-    e.preventDefault();
-  }
-};
 import Darkmode from "./assets/darkmode";
 // import Snow from  "./assets/snow"
 
@@ -95,7 +86,6 @@ import FDonates from "./components/Donates";
 import FPickShow from "./components/PickShow";
 import FBotSteps from "./views/BotSetps";
 // import FLinkPage from '/src/views/linkPage';
-import FRightClick from '@/components/RightClick.vue'
 
 
 export default {
@@ -116,7 +106,6 @@ export default {
     // FPicslide,
     FPickShow,
     FBotSteps,
-    FRightClick,
   },
 
   data: () => ({
