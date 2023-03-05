@@ -2,23 +2,23 @@
   <div>
     <v-card-title class="headline lighten-2 pt-5">
       隐私政策 / Privacy Policy
+      以及包括的服务器的声明内容
     </v-card-title>
 
     <v-card-text class="pb-0 mb-n2">
       <div class="text-h6 mb-2">总则</div>
       <div class="text-body-2 mb-2">
         感谢您访问
-        <a href="https://fsky7.com" style="text-decoration: none"
-          >EtherealCraft`s Website</a
-        >（以下简称「本站」）。尽管我们在您浏览的过程中可能会收集浏览器的信息以改善应用程序和服务质量，但是我们非常重视您的隐私保护和个人信息保护。为了更好的保护您的隐私，我们提供了本隐私政策声明，描述我们收集、处理、存储和使用您的个人信息的方式。
+        <a href="https://www.etherealcraft.cn" style="text-decoration: none"
+          >EtherealCraft`s index</a> 和<a href="https://wj.etherealcraft.cn">灵卷审核</a>（以下简称「本站」）。尽管我们在您浏览或者在使用的过程中可能会收集浏览器的信息以改善应用程序和服务质量，但是我们非常重视您的隐私保护和个人信息保护。为了更好的保护您的隐私，我们提供了本隐私政策声明以及包括服务器的声明内容，描述我们收集、处理、存储和使用您的个人信息的方式以及服务器相关内容的描述。
       </div>
       <div class="text-h6 mb-2">关于修订</div>
-      <div class="text-body-2 mb-2 px-4">最后更新日期：2022 年 10 月 31 日</div>
+      <div class="text-body-2 mb-2 px-4">最后更新日期：2023 年 3 月 5 日</div>
       <div class="text-body-2 mb-2">
-        对于本隐私政策，我们保留在任何时间修改，修订或更新本政策的权利。因此您应该定期访问此网页，检查本政策的任何修改。最后更新日期的变化表示该政策已被更新或编辑，更新或编辑的版本在发布后立即取代先前任何版本。
+        对于本站，我们保留在任何时间修改，修订或更新本政策的权利。因此您应该定期访问此网页，检查本政策的任何修改。最后更新日期的变化表示该政策已被更新或编辑，更新或编辑的版本在发布后立即取代先前任何版本。
       </div>
       <div class="text-body-2 mb-2">
-        您的浏览器和运营商等内容分发提供商可能会出于节省带宽的或其他因素缓存我们的页面，在这种情况下倘若导致了您看到的页面内容和实际不符，所以我们会不定期的修订网页内容。
+        我们会不定期的此协议的内容，由于网络分发内容的不及时或者出现其他问题，导致您所看到或者使用的内容并非是最新内容，请及时刷新您的网络内容请确保您所看到的内容是最新的。
       </div>
       <div class="text-h6 mb-2">名词定义</div>
       <div class="text-body-2 mb-2">
