@@ -28,11 +28,9 @@
     <v-main :dark="dark">
       <canvas id="canvas" class="snow"></canvas>
       <f-main-title></f-main-title>
-      <!--          <f-main-new-year></f-main-new-year>-->
       <v-container class="f-container">
         <f-main-about :dark="dark"></f-main-about>
         <f-main-chips :dark="dark"></f-main-chips>
-        <!--                <f-picslide :dark="dark"></f-picslide>-->
         <f-contact
           style="display: block; opacity: 1; z-index: 1"
           :dark="dark"
@@ -42,7 +40,6 @@
         <f-donate :dark="dark"></f-donate>
         <f-donates :dark="dark"></f-donates>
         <f-pick-show :dark="dark"></f-pick-show>
-<!--        <f-link-page :dark="dark"></f-link-page>-->
         <f-footer :dark="dark"></f-footer>
         <aplayer :audio="audio" :lrcType="3" fixed />
       </v-container>
@@ -53,7 +50,7 @@
         :bottom="100"
       >
         <div
-          :dark="dark"
+
           style="
              {
               height: 100%;
@@ -89,7 +86,7 @@ import FDonates from "./components/Donates";
 import FPickShow from "./components/PickShow";
 import FBotSteps from "./views/BotSetps";
 // import FLinkPage from '/src/views/linkPage';
-// import FMainNewYear from '../src/views/mainNewYear'
+
 
 export default {
   name: "App",
@@ -142,7 +139,9 @@ export default {
     // snow:false,
     drawer: null,
   }),
-  methods: {},
+  methods: {
+
+  },
   mounted() {
     Darkmode(this);
     // Snow(this);
