@@ -222,7 +222,7 @@ export default {
         url:"https://api.etherealcraft.cn/music/橘子海 (Orange Ocean) - 夏日漱石 (Summer Cozy Rock).mp3"
       },
       {
-        name:"吱吱吱小吱 - 【钢琴版】舞い落ちる花びら（Fallin' Flower）（翻自 SEVENTEEN）",
+        name:"吱吱吱小吱 - 【钢琴版】舞い落ちる花びら（Fallin' Flower）（翻自  SEVENTEEN）",
         artist: "吱吱吱小吱 - 【钢琴版】舞い落ちる花びら（Fallin' Flower）（翻自 SEVENTEEN）",
         url:"https://api.etherealcraft.cn/music/吱吱吱小吱 - 【钢琴版】舞い落ちる花びら（Fallin' Flower）（翻自 SEVENTEEN）.mp3"
       }
