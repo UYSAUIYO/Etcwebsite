@@ -1,6 +1,7 @@
 <template>
   <div class="my-12 px-4 text-caption" style="opacity: 0.8; z-index: 1">
     <b>EtherealCraft's Website</b>
+    <v-card-text><a>最后更新时间：2023/03/07|13:01</a></v-card-text>
     <br />Created by Mc_yuwen with ♥ since 2022.<br />
     <p id="htmer_time"></p>
     <a href="https://beian.miit.gov.cn">苏ICP备2021048590号</a>

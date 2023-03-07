@@ -1,6 +1,6 @@
 <template>
   <div style="background: none" class="bots" :dark="dark">
-    <v-card>
+    <v-card style="background:none">
       <v-toolbar flat color="#fb7299" :dark="dark">
         <v-toolbar-title>审核单元</v-toolbar-title>
         <v-card-subtitle>Beta</v-card-subtitle>
@@ -40,13 +40,13 @@
                 >参与审核问卷，一审问卷内容会根据实际情况进行修改，以确保问卷没有问题。
               </p>
               <p>
-                3.审核玩家请认真填写一审问卷,重复提交问卷会降低印象分，如果提交问卷在三天内没有得到答复，则是未通过。
+                3.审核玩家请认真填写一审问卷,重复提交问卷会降低印象分，如果提交问卷在一个月内没有得到答复，则是未通过。
               </p>
               <p>
-                4.单张问卷审核时间最多三天，每周最多投卷一次，请勿重复提交。
+                4.单张问卷审核时间最多14个工作日，每周最多投卷一次，请勿重复提交。
               </p>
               <p>
-                5.一审通过后，进入二审，二审通过后，有为期一周的<a>考察期</a>，主要是在线率和交流情况。
+                5.一审通过后，进入二审，二审通过后，有为期一周的<a plain @click="tftip">考察期</a>，主要是在线率和交流情况。
               </p>
               <p>
                 6.有更多特长也许是个加分项，请好好写下您的个人情况简介，我们会更加在意。
@@ -97,7 +97,8 @@
                         <v-icon>mdi-close</v-icon>
                         关闭
                       </v-btn>
-                      <v-btn color="#fb7299" text @click="regsiter">
+                      <v-btn :loading="loading3"
+                             :disabled="loading3" color="#fb7299" text @click="loader = 'loading3'">
                         <v-icon>mdi-login</v-icon>
                         注册
                       </v-btn>
@@ -137,6 +138,7 @@
                   1.熟悉各种mod的使用，熟练使用喷射合成台，详细内容请查看网站的相关教程列表。
                 </p>
                 <p>2.在线频率高，在线不强制要求，活跃度很高也算是加分项。</p>
+                <p>3.长时间不在线请向任意管理员说明情况</p>
                 <v-btn class="login" @click="mongily" color="#fb7299">
                   <v-icon>mdi-upload</v-icon>
                   填写问卷
@@ -156,6 +158,7 @@
               <p>
                 2.二审是一些简单的交流和实操部分，如果有作品，请直接在一审问卷中上传您的作品视频或者是图片。
               </p>
+              <p>3.这里的审核问卷是特指为建筑师的审核，如果没有一定的把握请尝试其他问卷。</p>
               <v-btn class="login" @click="build" color="#fb7299">
                 <v-icon>mdi-upload</v-icon>
                 填写问卷
@@ -178,13 +181,36 @@ export default {
       botsetps: require("../data/botsetps.json"),
       tab: null,
       items: ["红石", "后勤", "建筑"],
+      loader:null,
       dialog: false,
+      loading3:false,
       e1: 1,
       url: "http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg",
       srcList: ["http://api.etherealcraft.cn/picture/qrcode_1669105559469.jpg"],
     };
   },
+  watch:{
+    loader (){
+      const l = this.loader
+      this[l] = !this[l]
+      setTimeout(() => (this[l] = false), 3000)
+      setTimeout(function (){
+        window.open("https://wj.etherealcraft.cn/user/register")
+      },3000)
+    }
+  },
   methods: {
+    tftip(){
+      const tfttiph = this.$createElement;
+      this.$notify({
+        title:'考察期',
+        message:tfttiph('i','考察期指的是新成员入服七天内的综合表现。'),
+        type:'warning',
+        position:'bottom-left',
+        showClose:false,
+        offset:100
+      })
+    },
     regsiter() {
       window.open("https://wj.etherealcraft.cn/user/register");
     },

@@ -20,8 +20,8 @@ module.exports = {
           staticDir: path.join(__dirname, 'dist'),
           routes: ['/'],
           minify: {
-            minifyCSS: true,
-            minifyJS: true,
+            minifyCSS: false,
+            minifyJS: false,
             removeComments: true,
             sortClassName: true,
             collapseWhitespace: true,

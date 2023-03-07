@@ -1,7 +1,7 @@
 /**
  * FlyingSky's Home
  * Dark Mode
- * 
+ *
  * @author FlyingSky-CN
  * @link https://github.com/FlyingSky-CN/MDr/blob/master/darkmode.js
  * @link https://blog.skk.moe/post/hello-darkmode-my-old-friend
@@ -42,7 +42,7 @@ export default function (vue) {
      * 是否为 Dark Mode
      */
     const getDarkModeFromCSSMediaQuery = () => {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
     }
 
     /**
@@ -50,7 +50,7 @@ export default function (vue) {
      * 是否为 Dark Mode
      */
     const getDarkModeFromCookie = () => {
-        var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)dark\s*=\s*([^;]*).*$)|^.*$/, "$1");
+        var cookie = document.cookie.replace(/(?:^|.*;\s*)dark\s*=\s*([^;]*).*$|^.*$/, "$1");
         if (cookie === "0") {
             return false
         } else if (cookie === "1") {
