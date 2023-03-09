@@ -71,6 +71,7 @@
 </template>
 
 <script>
+console.log("%c 邀请您加入我们的开发 %c ".concat("QQ2110146041", " ").concat("添加信息:开发路🐫", " %c"), 'background: #35495e; padding: 1px; border-radius: 3px 0 0 3px; color: #fff', 'background: #fb7299; padding: 1px; border-radius: 0 3px 3px 0; color: #fff', 'background: transparent');
 import Darkmode from "./assets/darkmode";
 // import Snow from  "./assets/snow"
 
