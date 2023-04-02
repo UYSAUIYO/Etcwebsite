@@ -1,0 +1,83 @@
+<template>
+  <div class="cube">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face left">3</div>
+    <div class="face right">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      x: 0,
+      y: 0,
+      z: 0,
+      angle: 0,
+      interval: null
+    };
+  },
+  mounted() {
+    this.interval = setInterval(() => {
+      this.angle += 1;
+      this.x = Math.sin(this.angle * (Math.PI / 180)) * 20;
+      this.z = Math.cos(this.angle * (Math.PI / 180)) * 20;
+    }, 16);
+  },
+  beforeDestroy() {
+    clearInterval(this.interval);
+  }
+};
+</script>
+
+<style scoped>
+.cube {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  margin: 100px auto;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+}
+
+.front {
+  transform: translateZ(50px);
+  background-color: blue;
+}
+
+.back {
+  transform: translateZ(-50px) rotateY(180deg);
+  background-color: green;
+}
+
+.left {
+  transform: rotateY(-90deg) translateX(-50px);
+  background-color: yellow;
+}
+
+.right {
+  transform: rotateY(90deg) translateX(50px);
+  background-color: orange;
+}
+
+.top {
+  transform: rotateX(90deg) translateY(-50px);
+  background-color: red;
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateY(50px);
+  background-color: purple;
+}
+</style>
