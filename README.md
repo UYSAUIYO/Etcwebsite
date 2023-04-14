@@ -1,8 +1,8 @@
-# FSky7.Home
+# Etherealcraft.cn
 
 **EtherealCraft's Website - HomePage**
 
-一个简约的个人网站主页，基于 Vue 和 Vuetify 开发。
+服务器官网的项目，代码是很混乱的没有进行整理。
 
 
 
